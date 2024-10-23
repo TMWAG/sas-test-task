@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'SF Pro Display';
+  src:
+    url('../../public/fonts/SF_Pro_Display/Regular.eot'),
+    url('../../public/fonts/SF_Pro_Display/Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src:
+    url('../../public/fonts/SF_Pro_Display/Bold.eot'),
+    url('../../public/fonts/SF_Pro_Display/Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
