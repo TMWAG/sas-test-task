@@ -219,6 +219,8 @@ defineEmits<{
 }
 
 .publication_date {
-
+  color: #c8c8c8;
+  font-family: 'SF Pro Display';
+  font-size: 14px;
 }
 </style>
