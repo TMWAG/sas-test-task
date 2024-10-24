@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { defineProps, ref } from 'vue'
+import TagList from './TagList.vue';
 
 defineProps<{
   title: string
@@ -103,7 +104,11 @@ defineEmits<{
           </span>
         </button>
       </div>
-      <span v-for="tag in tags">{{ tag }}</span>
+      <div class="info">
+        <a href="" >Open comments</a>
+        <span>Today</span>
+        <TagList :tags="tags"/>
+      </div>
     </div>
   </div>
 </template>
@@ -137,6 +142,8 @@ defineEmits<{
 .footer {
   display: flex;
   align-items: center;
+  gap: 8px;
+  width: 100%;
 }
 
 .reaction_group {
@@ -202,5 +209,12 @@ defineEmits<{
   font-family: 'SF Pro Display';
   font-size: 14px;
   color: rgb(4, 4, 5, 30%);
+}
+
+.info {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  align-items: center;
 }
 </style>
