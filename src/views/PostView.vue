@@ -43,6 +43,7 @@ onMounted(async () => {
 .post_wrapper {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   width: 676px;
 }
 </style>
