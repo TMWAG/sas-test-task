@@ -8,7 +8,7 @@ export const usePublicationsStore = defineStore('publications', {
     async getPosts() {
       if (this.posts.length === 5) {
         return
-      } 
+      }
       try {
         const postsResponse = await fetch(
           'https://dummyjson.com/posts?limit=5',
@@ -19,15 +19,16 @@ export const usePublicationsStore = defineStore('publications', {
       }
     },
     /**
-     * gets post and puts it in store if it not already present in store
-    */
+     * Gets post and puts it in store if it not already present in store
+     * @param id Number
+     */
     async getPostById(id: number) {
       if (this.posts.find(p => p.id === id)) {
         return
       }
       try {
         const postResponse = await fetch(
-          `https://dummyjson.com/posts/${id}`
+          `https://dummyjson.com/posts/${id}`,
         ).then<IPost>(res => res.json())
         this.posts.push(postResponse)
       } catch (e) {
@@ -54,7 +55,7 @@ export const usePublicationsStore = defineStore('publications', {
       const postIdx = this.posts.findIndex(p => p.id === postId)
       if (this.posts[postIdx].userReaction === 'disliked') {
         this.posts[postIdx].reactions.dislikes--
-        this.posts[postIdx].userReaction = undefined;
+        this.posts[postIdx].userReaction = undefined
         return
       }
       if (this.posts[postIdx].userReaction === 'liked') {
