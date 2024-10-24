@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import CommentSection from '@/components/CommentSection.vue'
-import Publication from '@/components/Publication.vue'
 import { usePublicationsStore } from '@/stores/publications'
 import { onMounted, ref } from 'vue'
+import CommentSection from '@/components/CommentSection.vue'
+import Post from '@/components/Post.vue'
 
 const props = defineProps<{
   id: string
@@ -25,13 +25,8 @@ onMounted(async () => {
     v-if="post"
     class="post_wrapper"
   >
-    <Publication
-      :body="post.body"
-      :id="post.id"
-      :reactions="post.reactions"
-      :tags="post.tags"
-      :title="post.title"
-      :user-reaction="post.userReaction"
+    <Post
+      :post="post"
       @dislike="publications.dislike(post.id)"
       @like="publications.like(post.id)"
     />
