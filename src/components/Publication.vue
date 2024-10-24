@@ -133,12 +133,14 @@ defineEmits<{
   font-family: 'SF Pro Display';
   font-weight: bold;
   line-height: 20px;
+  color: var(--text);
 }
 
 .body {
   font-family: 'SF Pro Display';
   font-size: 20px;
   line-height: 20px;
+  color: var(--text);
 }
 
 .footer {
@@ -154,7 +156,7 @@ defineEmits<{
 }
 
 .reaction {
-  background-color: #f5f5f5;
+  background-color: var(--bg-gray);
   border: none;
   height: 27px;
   padding: 8px 8px 8px 12px;
@@ -175,11 +177,11 @@ defineEmits<{
 }
 
 .liked {
-  background-color: #ff3b30;
+  background-color: var(--red);
 }
 
 .disliked {
-  background-color: #040405;
+  background-color: var(--black);
 }
 
 .label {
@@ -188,29 +190,29 @@ defineEmits<{
   align-items: center;
   font-family: 'SF Pro Display';
   font-size: 14px;
-  color: #040405;
+  color: var(--black);
 }
 
 .liked > .label {
-  color: #ffffff;
+  color: var(--chrome);
 }
 
 .liked > .count {
-  color: #ffffff;
+  color: var(--chrome);
 }
 
 .disliked > .label {
-  color: #ffffff;
+  color: var(--chrome);
 }
 
 .disliked > .count {
-  color: #ffffff;
+  color: var(--chrome);
 }
 
 .count {
   font-family: 'SF Pro Display';
   font-size: 14px;
-  color: #adadad;
+  color: var(--dark-gray-text);
 }
 
 .info {
@@ -221,13 +223,13 @@ defineEmits<{
 }
 
 .publication_date {
-  color: #c8c8c8;
+  color: var(--gray-text);
   font-family: 'SF Pro Display';
   font-size: 14px;
 }
 
 .comments_link {
-  color: #f46e0e;
+  color: var(--accent-primary);
   font-family: 'SF Pro Display';
   font-size: 14px;
 }

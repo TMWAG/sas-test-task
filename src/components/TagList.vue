@@ -23,7 +23,7 @@ defineProps<{
 }
 
 .tag_item {
-  background-color: #f5f5f5;
+  background-color: var(--bg-gray);
   font-family: 'SF Pro Display';
   font-size: 14px;
   color: #040405;
@@ -39,7 +39,7 @@ defineProps<{
 }
 
 .tag_item:first-child:before {
-  background-color: #f5f5f5;
+  background-color: var(--bg-gray);
   content: '';
   height: 14.3px;
   width: 14.3px;

@@ -8,67 +8,70 @@ defineEmits<{
 </script>
 
 <template>
-<div class="comment_item">
-  <div class="user_picture"></div>
-  <div class="comment_text">
-    <span class="user_name">
-      {{ comment.user.username }}
-    </span>
-    <span class="comment_body">{{ comment.body }}</span>
-    <div class="comment_footer">
-      <span class="comment_date">
-        Today
+  <div class="comment_item">
+    <div class="user_picture"></div>
+    <div class="comment_text">
+      <span class="user_name">
+        {{ comment.user.username }}
       </span>
-      <button class="delete_comment_button" @click="$emit('delete')">
-        Удалить
-      </button>
+      <span class="comment_body">{{ comment.body }}</span>
+      <div class="comment_footer">
+        <span class="comment_date"> Today </span>
+        <button
+          class="delete_comment_button"
+          @click="$emit('delete')"
+        >
+          Удалить
+        </button>
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <style>
-.comment_item{
+.comment_item {
   display: flex;
   gap: 8px;
 }
 
-.user_picture{
+.user_picture {
   width: 46px;
   height: 46px;
-  border: solid 3px black;
+  border: solid 3px var(--text);
   border-radius: 50%;
 }
 
-.comment_text{
+.comment_text {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.user_name{
+.user_name {
   font-family: 'SF Pro Display';
   font-weight: bold;
   font-size: 20px;
   line-height: 20px;
+  color: var(--text);
 }
-.comment_body{
+.comment_body {
   font-family: 'SF Pro Display';
   font-size: 20px;
   margin-bottom: 4px;
+  color: var(--text);
 }
-.comment_footer{
+.comment_footer {
   display: flex;
-  gap: 20px
+  gap: 20px;
 }
-.comment_date{
+.comment_date {
   font-family: 'SF Pro Display';
   font-size: 14px;
-  color: #c8c8c8;
+  color: var(--gray-text);
 }
-.delete_comment_button{
-  color: #fe3b2f;
+.delete_comment_button {
+  color: var(--red);
   text-decoration: underline;
   border: none;
-  background: none ;
+  background: none;
 }
 </style>

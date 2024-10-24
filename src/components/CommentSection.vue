@@ -47,5 +47,6 @@ onBeforeMount(async () => {
   font-weight: bold;
   font-size: 28px;
   margin-top: 40px;
+  color: var(--text);
 }
 </style>
