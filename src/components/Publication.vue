@@ -106,7 +106,7 @@ defineEmits<{
       </div>
       <div class="info">
         <a href="" >Open comments</a>
-        <span>Today</span>
+        <span class="publication_date">Today</span>
         <TagList :tags="tags"/>
       </div>
     </div>
@@ -152,7 +152,7 @@ defineEmits<{
 }
 
 .reaction {
-  background-color: rgb(4, 4, 5, 4%);
+  background-color: #f5f5f5;
   border: none;
   height: 27px;
   padding: 8px 8px 8px 12px;
@@ -208,7 +208,7 @@ defineEmits<{
 .count {
   font-family: 'SF Pro Display';
   font-size: 14px;
-  color: rgb(4, 4, 5, 30%);
+  color: #adadad;
 }
 
 .info {
@@ -216,5 +216,9 @@ defineEmits<{
   gap: 8px;
   width: 100%;
   align-items: center;
+}
+
+.publication_date {
+
 }
 </style>
