@@ -12,7 +12,9 @@ onBeforeMount(async() => {
 
 <template>
   <div class="pubs_wrapper">
-    <Publication v-for="post in publications.posts" 
+    <Publication v-for="post in publications.posts"
+      :key="`post-${post.id}-${post.title}`"
+      :id="post.id"
       :title="post.title" 
       :body="post.body"
       :reactions="post.reactions"
