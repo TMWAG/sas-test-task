@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { defineProps, ref } from 'vue'
 import TagList from './TagList.vue';
+import { RouterLink } from 'vue-router';
 
 defineProps<{
+  id: number
   title: string
   body: string
   reactions: {
@@ -105,7 +107,7 @@ defineEmits<{
         </button>
       </div>
       <div class="info">
-        <a href="" >Open comments</a>
+        <RouterLink :to="{ name: 'post', params: {id} }" class="comments_link" >Open comments</RouterLink>
         <span class="publication_date">Today</span>
         <TagList :tags="tags"/>
       </div>
@@ -220,6 +222,12 @@ defineEmits<{
 
 .publication_date {
   color: #c8c8c8;
+  font-family: 'SF Pro Display';
+  font-size: 14px;
+}
+
+.comments_link {
+  color: #f46e0e;
   font-family: 'SF Pro Display';
   font-size: 14px;
 }
